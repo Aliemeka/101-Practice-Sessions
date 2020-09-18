@@ -66,6 +66,7 @@ nav.navbar{
 
 ul.nav-links{
     float: right;
+    list-style: none;
     list-style-type: none;
 }
 
@@ -113,11 +114,32 @@ section  img{
     width: 50%;
 }
 
+.grid{
+    display: grid !important;
+}
+
+section#work .grid{
+    width: 100%;
+    padding: 0 3rem;
+    grid-row-gap: 1em;
+}
+
+section#work .grid .exhibit-image{
+    width: 100%;
+    height: auto;
+    
+}
+
 
 
 @media(min-width: 768px){
     .main{
         padding: 0 4rem;
+    }
+
+    section#work .grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2em;
     }
 }
 
@@ -151,5 +173,10 @@ section  img{
 
     section#about img{
         width: 40%;
+    }
+
+    section#work .grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2em;
     }
 }
