@@ -7,46 +7,67 @@
     box-sizing: border-box;
 }
 
+/* The variables */
 :root{
-    --mark-size: 16px;  
-    --background-color: #fdfafa;
+    --background-color: #fcfcfa;
+    --header-bg: #eeeee4;
+    --heading-color: #f02547;
+    --heading-type: Poppins, sans-serif;
+    --font-size: 1.2rem;
+    --font-color: #31314a;
+    --font-type: Montserrat, Helvetica, sans-serif;
+
+    --even-section-bg: var(--header-bg);
+
+    --post-heading: #343434;
+
+    --section-padding: 4rem;
+    --section-border: rgba(50, 56, 56, .40);
+
+    --link-color: #ee3e5b;
+    --button-bg: #ee3e5b;
+    --light-color: var(--background-color);
 }
 
 body{
-    font-family: Montserrat, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: var(--font-type);
+    font-size: var(--font-size);
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 header{
     position: relative;
 }
 
-h1, h2, h3, h4, h5{
-    font-family: Poppins;
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-type);
     font-weight: 800;
+    color: var(--heading-color);
 }
 
 h1{
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: red;
 }
 
 h2{
     text-align: center;
-    color: red;
+}
+
+h2.heading{
+    font-size: 2.3rem;
 }
 
 
 nav{
     width: 100%;
-    
+    background-color: var(--header-bg);
 }
 
 nav.navbar{
-    background-color: whitesmoke;
+    background-color: var(--header-bg);
     position: fixed;
     top:0;
     height: 60px;
@@ -61,8 +82,14 @@ nav.navbar{
 }
 
 .navbar .nav-link>a{
-    color: inherit;
+    color: var(--link-color);
+    font-weight: 400;
     text-decoration: none;
+}
+
+.navbar .nav-link>a:hover{
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .logo{
@@ -79,8 +106,32 @@ ul.nav-links{
 
 button.toggle-button{
     float: right;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 3px;
+    font-family: var(--font-type);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: 400ms ease;
 }
 
+button.toggle-button:focus,
+button.toggle-button:hover{
+    filter: brightness(1.5);
+}
+
+section{
+    width: 100vw;
+    padding: 3rem 3rem;
+}
+
+section:nth-child(odd){
+    background-color: var(--even-section-bg);
+}
 
 
 
@@ -90,8 +141,8 @@ button.toggle-button{
 
 
 .banner{
-    padding-top: 8rem;
-    padding-bottom: 4.5rem;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
     text-align: center;
 }
 
@@ -102,15 +153,11 @@ h1.banner-heading{
 }
 
 .banner-content{
-    font-size: 14px;
+    font-size: calc(var(--font-size)*1.02);
 }
 
 .main{
-    padding: 0 1rem;
-}
-
-section{
-    padding: 3rem 2rem;
+    padding: 0 0rem;
 }
 
 section  img{
@@ -139,7 +186,7 @@ section#work .grid .exhibit-image{
 
 @media(min-width: 768px){
     .main{
-        padding: 0 4rem;
+        padding: 0 4;
     }
 
     section#work .grid{
