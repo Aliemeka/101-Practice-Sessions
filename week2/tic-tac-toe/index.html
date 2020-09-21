@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Tic-tac-toe game for fun">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tic-tac-toe game</title>
+</head>
+<body>
+    <header class="header flex" aria-roledescription="header">
+        <h2 class="logo">Tic-tac-toe game</h2>
+        <section >
+            <button class="theme-button" id="theme-button">
+                <i class="theme-icon day-icon uil uil-sun"></i>
+                <i class="theme-icon night-icon uil uil-moon"></i>
+            </button>
+        </section>
+    </header>
+    <main>
+        <nav class="flex navbar">
+            <ul class="mode-links flex" aria-roledescription="Choose game mode">
+                <li class="mode-link">
+                    <button class="mode-button">Multiplayer</button>
+                </li>
+                <li class="mode-link">
+                    <button class="mode-button">Single Player</button>
+                </li>
+            </ul>
+        </nav>
+        <section class="game-board">
+            <h3 class="mode-heading">Multiplayer mode</h3>
+            <article class="game-grid grid" id="game-grid">
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+            </article>
+        </section>
+        
+    </main>
+    <section class="overlayed" id="win-overlay">
+        <h1 id="win-message"></h1>
+        <button class="mode-button restart-btn" id="restart">Restart</button>
+    </section>
+    <script async src="js/app.js" defer></script>
+</body>
+</html>

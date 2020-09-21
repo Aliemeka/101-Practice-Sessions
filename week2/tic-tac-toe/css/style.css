@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --bg-color: #fcfcfc;
+    --secondary-color: #fa3c5c;
+    --green-cell: #44ff56;
+    --orange-cell: #f1b560;
+    --font-color: #393939;
+    --light-color: #fcfcfc;
+    --header-color: #efffff;
+    --nav-color: #fcfcfa;
+    --overlay-bg: rgba(214, 226, 223, 0.6);
+
+    --cell-size: 5.6rem;
+    --cell-border: 2px solid var(--light-color);
+    --mark-size: calc(var(--cell-size) * .9);
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--bg-color);
+    font-family: Raleway;
+    color: var(--font-color);
+    overflow: hidden;
+}
+
+
+body.dark-mode{
+    --bg-color: #01013f;
+    --font-color: #fcfcfa;
+    --header-color: #030355;
+    --nav-color: #01012c;
+    --overlay-bg: rgba(4, 4, 60, 0.6);
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100vw;
+}
+
+main{
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    height: 4rem;
+}
+
+button{
+    outline: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.header{
+    padding: 1.1rem 1rem;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    align-items: center;
+}
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theme-button{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: var(--font-color) solid 2px;
+    cursor: pointer;
+}
+
+.theme-icon{
+    font-size: 1.2rem;
+}
+
+.day-icon{
+    display: block;
+}
+
+.night-icon{
+    display: none;
+}
+
+.dark-mode .night-icon{
+    display: block;
+}
+
+.dark-mode .day-icon{
+    display: none;
+}
+
+.navbar{
+    justify-content: center;
+    background-color: var(--nav-color);
+}
+
+.mode-links{
+    height: 100%;
+    list-style: none;
+}
+
+.mode-link{
+    margin-top: 10px;
+    height: 100%;
+    margin-right: 1rem;
+}
+
+.mode-button{
+    height: 70%;
+    font-family: Raleway;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    border: 0;
+    border-radius: 3px;
+    transition: 400ms ease;
+}
+
+.mode-button:hover{
+    filter: brightness(1.6);
+    font-size: 14px;
+}
+
+.game-board{
+    padding: 2rem;
+    width: 100%;
+
+}
+
+.mode-heading{
+    text-align: center;
+}
+
+
+.game-grid{
+    margin-top: 4rem;
+    display: grid;
+    width: 90vw;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell{
+    height: var(--cell-size);
+    width: var(--cell-size);
+    display: block;
+    border-top: var(--cell-border);
+    border-left: var(--cell-border);
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+    border-bottom: var(--cell-border);
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9){
+    border-right: var(--cell-border);
+}
+
+.cell:hover{
+    filter: brightness(1.6);
+}
+
+.cell.x,
+.cell.o{
+    cursor: not-allowed;
+    filter: none;
+}
+
+.cell.x{
+    background-color: var(--green-cell);
+}
+
+.game-grid.x .cell:hover:not(.x):not(.o)::after,
+.game-grid.x .cell:hover:not(.x):not(.o)::before{
+    content: "";
+    position: absolute;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    display: block;
+    background-color: var(--light-color);
+    opacity: .2;
+}
+
+.game-grid.o .cell:hover:not(.x):not(.o)::before{
+    content: "";
+    position: absolute;
+    background: none;
+    height: var(--mark-size);
+    width: var(--mark-size);
+    border-radius: 50%;
+    border: calc(var(--mark-size) * .15) solid var(--light-color);
+    opacity: .2;
+}
+
+.game-grid.x .cell:hover::before{
+    transform: rotate(45deg);
+}
+
+.game-grid.x .cell:hover::after{
+    transform: rotate(-45deg);
+}
+
+.cell.x::after,
+.cell.x::before{
+    content: "";
+    position: absolute;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    display: block;
+    background-color: var(--light-color);
+}
+
+.cell.x::before{
+    transform: rotate(45deg);
+}
+
+
+.cell.x::after{
+    transform: rotate(-45deg);
+}
+
+
+.cell.o{
+    background-color: var(--orange-cell);
+}
+
+.cell.o::before{
+    content: "";
+    position: absolute;
+    background: none;
+    height: var(--mark-size);
+    width: var(--mark-size);
+    border-radius: 50%;
+    border: calc(var(--mark-size) * .15) solid var(--light-color);
+}
+
+
+.overlayed{
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--overlay-bg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlayed.show{
+    display: flex;
+}
+
+.restart-btn{
+    margin-top: 1rem;
+    height: 3rem;
+}
+
+
+

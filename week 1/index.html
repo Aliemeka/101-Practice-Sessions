@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href="style.css"/>
+    <meta name="description" content="Profile page of Emeka Allison">
+    <link rel=stylesheet href="css/style.css"/>
     <title>Emeka Allison</title>
 </head>
 <body>
     <header class="header">
         <!-- Ctr + / Navigation -->
-        <nav class="navbar">
-            <h3 class="logo">Emeka</h3>
-            <ul class="nav-links">
+        <nav class="navbar" aria-roledescription="Navbar">
+            <a href="/"><h3 class="logo">Emeka</h3></a>
+            <ul class="nav-links" aria-roledescription="navigation" role="navigation">
                 <li class="nav-link"><a href="#about">About</a></li>
                 <li class="nav-link"><a href="#work">Work</a></li>
                 <li class="nav-link"><a href="#contact">Contact</a></li>
                 <li class="nav-link"><a href="blog.html">Blog</a></li>
             </ul>
-            <button class="toggle-button">Menu</button>
+            <button class="toggle-button" aria-roledescription="navigation menu button">Menu</button>
         </nav>
         <!-- Banner -->
         <section class="banner">
@@ -30,7 +31,7 @@
         <section id="about" class="main-section">
             <h2 class="heading">About</h2>
             <div>
-                <img src="emeka 1.png" class="profile-img"/> <!--jpg, png, -->
+                <img src="img/emeka 1.png" alt="Profile picture of me"/> <!--jpg, png, -->
                 <p>I’m a creative, software engineer, 
                     podcaster and skills trainer. 
                     I’m a creative, software engineer, 
@@ -48,22 +49,31 @@
             <p class="text-center">I make interesting art</p>
             <article class="grid">
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 1.png" alt="Exihibit 1"/>
+                    <img src="img/Rectangle 1.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 2.png" alt="Exihibit 2"/>
+                    <img src="img/Rectangle 2.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 3.png" alt="Exihibit 3"/>
+                    <img src="img/Rectangle 3.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 4.png" alt="Exihibit 4"/>
+                    <img src="img/Rectangle 4.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 5.png" alt="Exihibit 5"/>
+                    <img src="img/Rectangle 5.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
                 <div class="img-container">
-                    <img class="exhibit-image" src="Rectangle 6.png" alt="Exihibit 6"/>
+                    <img src="img/Rectangle 6.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
+                </div>
+                <div class="img-container">
+                    <img src="img/Rectangle 7.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
+                </div>
+                <div class="img-container">
+                    <img src="img/Rectangle 8.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
+                </div>
+                <div class="img-container">
+                    <img src="img/Rectangle 9.png" alt="Exhibit one" title="Exhibit one" class="exhibit-image"/>
                 </div>
             </article>
         </section>
@@ -78,8 +88,14 @@
                 a accusantium voluptatibus repellendus ab consectetur debitis error exercitationem culpa voluptatem animi ducimus, odio harum accusamus. Fugit qui cumque sint temporibus quaerat, dolores expedita, quisquam tenetur assumenda quasi sequi nemo labore atque quod dolor magnam voluptates est eos officia veniam consequatur, reprehenderit ipsum. Quaerat facilis eveniet vel non exercitationem eaque at tempore vero error?</p>
         </section>
     </main>
-    <footer>
-        
+    <footer class="footer flex">
+        <h4>Emeka Allison &copy; 2020</h4>
+        <ul class="foot-links flex" aria-roledescription="navigation" role="navigation">
+            <li class="foot-link"><a href="#about">Top stories</a></li>
+            <li class="foot-link"><a href="#work">News</a></li>
+            <li class="foot-link"><a href="#contact">Trends</a></li>
+            <li class="foot-link"><a href="blog.html">Forum</a></li>
+        </ul>
     </footer>
 </body>
 </html>
