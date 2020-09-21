@@ -108,7 +108,7 @@ section{
     padding: 3rem 2rem;
 }
 
-section  img{
+section  img.profile-img{
     display: block;
     margin: 1.5rem auto;
     width: 50%;
@@ -121,13 +121,12 @@ section  img{
 section#work .grid{
     width: 100%;
     padding: 0 3rem;
-    grid-row-gap: 1em;
+    grid-row-gap: 2em;
 }
 
 section#work .grid .exhibit-image{
     width: 100%;
     height: auto;
-    
 }
 
 
