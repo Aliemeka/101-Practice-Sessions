@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Store</title>
+</head>
+<body>
+    <main class="donut-main">
+        <h1 class="heading">Donut Store</h1>
+        <div>
+            <h3>Make an Entry </h3>
+            <form name="orderform" method="POST">
+                <div class="field">
+                    <div class="col-md-6 entry">
+                        Name: 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="username" name="username" value="" />
+                    </div>
+                    <div class="col-md-6 entry">
+                        # of caked donuts: 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="cakeddonuts" name="cakeddonuts" value="" />
+                    </div>
+                    <div class="col-md-6 entry">
+                    # of glazed donuts:
+                    </div>
+                    <div class="col-md-6"> 
+                        <input type="text" id="glazeddonuts" name="glazeddonuts" value="" />
+                    </div>
+                    <div class="col-md-6 entry">
+                        Minutes to pickup: 
+                    </div>
+                    <div class="col-md-6"> 
+                        <input type="text" id=pickupminutes name="pickupminutes" value="" onchange="updateOrder()" />
+                    </div>
+                    <div class="col-md-6 entry">
+                        Subtotal: 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="subtotal" name="subtotal" value=""/>
+                    </div>
+                    <div class="col-md-6 entry">
+                        VAT: 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="tax" name="tax" value=""/>
+                    </div>
+                    <div class="col-md-6 entry">
+                        Total price: 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="total" name="total" value=""/>
+                    </div>
+                    <div class="enter">
+                        <input class="order-btn" type="button" value="Place order" onclick="placeOrder();" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
