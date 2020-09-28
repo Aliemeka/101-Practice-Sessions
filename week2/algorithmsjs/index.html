@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Crumpy Donuts</h1>
+    </header>
+    <main>
+        <h3>Make your order</h3>
+        <form action="" onsubmit="(e)=>stopDefault(e);">
+            <div class="label-col">
+                <label for="name">Name</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="name" id="name" onchange="updateValue()" autofocus>
+            </div>
+
+
+            <div class="label-col">
+                <label for="number">No. of Donots</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="number-of-donuts" id="number-of-donuts" onchange="updateValue()">
+            </div>
+
+
+            <div class="label-col">
+                <label for="name">Time for Delivery</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="time" id="time" onchange="updateValue">
+            </div>
+
+
+            <div class="label-col">
+                <label for="name">Subtotal</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="subtotal" id="subtotal">
+            </div>
+
+            <div class="label-col">
+                <label for="name">VAT</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="vat" id="vat" disabled>
+            </div>
+
+            <div class="label-col">
+                <label for="name">Total</label>
+            </div>
+            <div class="input-col">
+                <input type="text" name="total" id="total">
+            </div>
+            <button type="button" onclick="stopDefault()">Place order</button>
+        </form>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
