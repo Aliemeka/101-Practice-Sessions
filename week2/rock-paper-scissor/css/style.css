@@ -86,6 +86,12 @@ header.game-header{
     align-items: center;
     margin: .5rem;
     cursor: pointer;
+
+    transition: 300ms ease-in;
+}
+
+.choice-area:hover{
+    background-color: #c6e1fd;
 }
 
 .choice-area > .choice-img{
@@ -105,4 +111,19 @@ header.game-header{
     .commentary{
         margin-top: 2rem;
     }    
+}
+
+.green{
+    border-color: #4aff4a;
+    box-shadow: 3px 4px 10px #7aff7a;
+}
+
+.red{
+    border-color: #ff4a4a;
+    box-shadow: 3px 4px 10px #ff7a7a;
+}
+
+.yellow{
+    border-color: #ffff4a;
+    box-shadow: 3px 4px 10px #ffff7a;
 }
