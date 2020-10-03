@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Weather App that checks the current weather in your location">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#eeeeff">
+    <link rel="manifest" href="manifest.json">
+    <link rel=stylesheet href="css/style.css"/>
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <h1 class="heading text-center">Weather App</h1>
+    </header>
+    <main class="container flex">
+        <section class="col-6">
+            <article class="full-width card text-center">
+                <h2 class="location"><span id="city">?</span>, <span id="country">?</span></h2>
+                <div class="loading" id="loader"></div>
+                <div class="card-body" id="data-display">
+                    <div class="weather-icon-div">
+                        <img id="weather-icon" src="assets/weather-icons/temp.svg" alt="weather"/>
+                    </div>
+                    <p><span id="temperature">-</span>&deg;C</p>
+                    <p id="weather-condition">?</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script async defer src="js/app.js"></script>
+</body>
+</html>

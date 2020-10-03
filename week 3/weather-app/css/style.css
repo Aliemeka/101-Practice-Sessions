@@ -1,0 +1,134 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+    font-size: 100%;
+    background-color: #eeeeff;
+    /* background: #124638;
+    background: -webkit-linear-gradient(90deg, #424a78, #1c1246, #0e0238);
+    background: linear-gradient(100deg, #424a78, #1c1246, #0e0238);
+    background-size: 100%; */
+    background-repeat: none;
+}
+
+header{
+    padding: 1em 0;
+    background-color: #023638;
+    color: #eeeeff;
+}
+
+
+.heading{
+    font-weight: 800;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #f5a282, #9aee89, #6977d3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+
+.flex{
+    display: flex;
+}
+
+main.container{
+    padding: 3rem 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.col-6{
+    width: 80vw;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.card{
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: #f4f4ff;
+    color: #454578;
+    border: 5px solid #047a7e85;
+    box-shadow: 3px 3px 12px rgba(5, 6, 7, .35);
+}
+
+
+.weather-icon-div{
+    position: relative;
+    width: calc(70% + 10px);
+    margin: 0 auto;
+    margin-top: -.6rem;
+    margin-bottom: 1rem;
+}
+
+.weather-icon-div img{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+.card p:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.location{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+
+.loading{
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    border-bottom: 5px solid #047a7e;
+    margin: 4px auto;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media(min-width: 768px){
+    .col-6{
+        width: 50vw;
+    }
+}
+
+@media(min-width: 1024px){
+    .col-6{
+        width: calc(30vw + 30px);
+    }
+}
+
+
+
